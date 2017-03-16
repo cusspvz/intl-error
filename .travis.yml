@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '7'
+cache: yarn
+before_install: npm i -g yarn
+install: yarn install
+script: yarn run build
+deploy:
+  provider: npm
+  email: josemoreiravarzim@gmail.com
+  api_key:
+    secure: PBAdDWuThuRWnnz4lmRQTftX6k2y9B6ehNq9SQ61AZNFQ+VfAZ6/UyNAXY9BWPdLdikuhChIVkLs8ImjV9y2UVksJXuH+0Omtg9GyGXEesSwk1br2SOi1nEOCn9CV+14+elW4Y8FyskqssyvKZHbT9GLTn8iGyzQJKZmQpbBd9qDmr8jXDlijA1GY62/zwsgdSYvFJje1aByDsA+FF8aEdEPJLcFwD/vv0s3V3R3Rp/U0fHQjgQlG2Sq5Ro/Z9xP2k1WjP1iKrAnbyPSR+FBTat6QxwohNcyb6FTUL6fb7sQaCLAKVxD7luRr3Tbz48x7RcemsLypKX/Ga2a9LWBSfO9sa1//sKiItfdYBimGrBkCgrXPEaFnf+WgauWz8evb/3DzoQ24D6oZ9kMfxlIPamvoWxeHc/e6AHYNinjMtGiM56hZ8frWy9oBhUrSJG2REgZyNsnPPndVrbUYks2wt+XiRI3HgO5A/d3CbZjeUHaqZcLI4bfwcRk3P4cJXbvXXIF3X5ySfG4dvX+w2pLlfYzkHlhT0r9tM90vZlw9aWHYAOSXwK6rJg8z26UBJI1d1ssXm8w5ge7fMM+PET+NB/443x9JWEIfMUl5ixbFAgg3J+/gy0Ye0Bb/PZicuA+sSHEMoLEv+UBL733MhCkYzaDacGILTZ+WQspNez8ByA=
+  on:
+    tags: true
+    repo: cusspvz/intl-error

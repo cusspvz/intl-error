@@ -4,6 +4,8 @@
   "description": "react-intl/intl compatible error",
   "main": "build/intl-error.js",
   "scripts": {
+    "preversion": "git push origin master",
+    "postversion": "git push origin --tags",
     "build": "rm -fR build/ && babel src/ -d build/ --compact --minified",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/cusspvz/intl-error#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-latest": "^6.24.0",
     "babel-preset-stage-0": "^6.22.0",
