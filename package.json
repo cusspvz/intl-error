@@ -2,8 +2,9 @@
   "name": "intl-error",
   "version": "1.0.0",
   "description": "react-intl/intl compatible error",
-  "main": "index.js",
+  "main": "build/intl-error.js",
   "scripts": {
+    "build": "rm -fR build/ && babel src/ -d build/ --compact --minified",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +18,15 @@
     "error"
   ],
   "author": "José Moreira <josemoreiravarzim@gmail.com>",
-  "license": "EUPL-3.0",
+  "license": "EUPL-1.1",
   "bugs": {
     "url": "https://github.com/cusspvz/intl-error/issues"
   },
-  "homepage": "https://github.com/cusspvz/intl-error#readme"
+  "homepage": "https://github.com/cusspvz/intl-error#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.17.1"
+  }
 }
